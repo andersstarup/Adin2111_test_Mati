@@ -1,0 +1,315 @@
+var group__mac =
+[
+    [ "adi_mac_DriverConfig_t", "structadi__mac___driver_config__t.html", [
+      [ "devMemSize", "structadi__mac___driver_config__t.html#a14dafe8a04346ff7d2f1717b4aad471a", null ],
+      [ "fcsCheckEn", "structadi__mac___driver_config__t.html#a8174ec70a630f3c99bed8342c9a6fa40", null ],
+      [ "pDevMem", "structadi__mac___driver_config__t.html#a056a5c3af1fbf087f168f295a44119e4", null ]
+    ] ],
+    [ "adi_mac_TimestampRdy_t", "structadi__mac___timestamp_rdy__t.html", [
+      [ "p1TimestampReadyA", "structadi__mac___timestamp_rdy__t.html#a704c5477bd3ee9914e45780e3fb6546a", null ],
+      [ "p1TimestampReadyB", "structadi__mac___timestamp_rdy__t.html#aef414041064f3a3861a1c79017c2c946", null ],
+      [ "p1TimestampReadyC", "structadi__mac___timestamp_rdy__t.html#a975934818ab0a6e1c20af5556f66a4f9", null ],
+      [ "p2TimestampReadyA", "structadi__mac___timestamp_rdy__t.html#afe50ad5be850b76b16a19a296df7d73e", null ],
+      [ "p2TimestampReadyB", "structadi__mac___timestamp_rdy__t.html#a9659d9f92d0a9ab8b983e0f7bc0cee10", null ],
+      [ "p2TimestampReadyC", "structadi__mac___timestamp_rdy__t.html#a8ee56a87cdcf7619224f1d4c2755b3ab", null ]
+    ] ],
+    [ "adi_mac_AddressRule_t", "structadi__mac___address_rule__t.html", [
+      [ "APPLY2PORT1", "structadi__mac___address_rule__t.html#a79fac398085b2a67135f5ce2bc8d8e0d", null ],
+      [ "APPLY2PORT2", "structadi__mac___address_rule__t.html#a69021c112f38905e8c24748d3ad67a49", null ],
+      [ "HOST_PRI", "structadi__mac___address_rule__t.html#adc98c36c8ef0e12e031cd8e7a71c7a2a", null ],
+      [ "RESERVED2", "structadi__mac___address_rule__t.html#a009cf9d7cbd672445f7c7ef39b957167", null ],
+      [ "RESERVED4", "structadi__mac___address_rule__t.html#a0c5cbcdf5fbcd681261f6fd206799948", null ],
+      [ "TO_HOST", "structadi__mac___address_rule__t.html#a011fce201ff565a3f8aa48b3d2bbfb53", null ],
+      [ "TO_OTHER_PORT", "structadi__mac___address_rule__t.html#a4d9d2ec0acbe01b154af18bfeeea3f1f", null ],
+      [ "VALUE16", "structadi__mac___address_rule__t.html#a9596ae5cbccfb3f8ff6d2dcf032db1d9", null ]
+    ] ],
+    [ "adi_eth_MacStatCounters_t", "structadi__eth___mac_stat_counters__t.html", [
+      [ "RX_ALGN_ERR_CNT", "structadi__eth___mac_stat_counters__t.html#a9da0ceccaacdde0f11a5bf3862cbe31e", null ],
+      [ "RX_BCAST_CNT", "structadi__eth___mac_stat_counters__t.html#a28d453e9a2168faf12d32f4404398207", null ],
+      [ "RX_CRC_ERR_CNT", "structadi__eth___mac_stat_counters__t.html#abd3f8a44723e7012dcdbaf9ce5531daa", null ],
+      [ "RX_DROP_FILT_CNT", "structadi__eth___mac_stat_counters__t.html#a18059309308e6514a0fcacd0cb5159f8", null ],
+      [ "RX_DROP_FULL_CNT", "structadi__eth___mac_stat_counters__t.html#aa66c81ffc4811d5d9c8f211d793e1367", null ],
+      [ "RX_FRM_CNT", "structadi__eth___mac_stat_counters__t.html#a055be2ad898d3f6802e5dd481825d26b", null ],
+      [ "RX_LS_ERR_CNT", "structadi__eth___mac_stat_counters__t.html#af294e435b015a56709da315282f25816", null ],
+      [ "RX_MCAST_CNT", "structadi__eth___mac_stat_counters__t.html#a23513bf7d5259268bc61a5c129d8573e", null ],
+      [ "RX_PHY_ERR_CNT", "structadi__eth___mac_stat_counters__t.html#abf98ad71117da64d9580f687bf8c44d9", null ],
+      [ "RX_UCAST_CNT", "structadi__eth___mac_stat_counters__t.html#aea26c74ef5edaea668d298162d2adb37", null ],
+      [ "TX_BCAST_CNT", "structadi__eth___mac_stat_counters__t.html#ad256645ee2ac0c734a2daf0345de61ec", null ],
+      [ "TX_FRM_CNT", "structadi__eth___mac_stat_counters__t.html#ac2d035fca06adff23b5a9d294c035499", null ],
+      [ "TX_MCAST_CNT", "structadi__eth___mac_stat_counters__t.html#a68c32081e59bb22a4fd946197e7c9c87", null ],
+      [ "TX_UCAST_CNT", "structadi__eth___mac_stat_counters__t.html#ad6c8d17beedf2f27b9b11d147369c2f0", null ]
+    ] ],
+    [ "adi_mac_FrameHeader_t", "structadi__mac___frame_header__t.html", [
+      [ "EGRESS_CAPTURE", "structadi__mac___frame_header__t.html#a6855be7532c7e100ad118b448963b3da", null ],
+      [ "PORT", "structadi__mac___frame_header__t.html#a7545b23f9bf604657fb0d3b09056ad48", null ],
+      [ "PRI", "structadi__mac___frame_header__t.html#ac833f2e4be08bccccb2fd4a79530d295", null ],
+      [ "RSVD0", "structadi__mac___frame_header__t.html#a423d7fbae95032fa54a94e3a3de48421", null ],
+      [ "RSVD1", "structadi__mac___frame_header__t.html#ad0344339acdb1fcd607b04ae46f6485d", null ],
+      [ "RSVD2", "structadi__mac___frame_header__t.html#ac1d1d16f7ab4167e683c7356f41971aa", null ],
+      [ "RSVD3", "structadi__mac___frame_header__t.html#acebb9c268208ec9a301d1e9cd6301e8a", null ],
+      [ "TIME_STAMP_PARITY", "structadi__mac___frame_header__t.html#a4a43ce0572cf65f57e19dbc77db4cf40", null ],
+      [ "TIME_STAMP_PRESENT", "structadi__mac___frame_header__t.html#af3173f0813f2e4d03e441861a8e919db", null ],
+      [ "VALUE16", "structadi__mac___frame_header__t.html#a2a06d84f865e601e729e37cec3cc22bd", null ]
+    ] ],
+    [ "adi_eth_BufDesc_t", "structadi__eth___buf_desc__t.html", [
+      [ "bufSize", "structadi__eth___buf_desc__t.html#af3b95b07a548b9a7893d4596b28ca7ee", null ],
+      [ "cbFunc", "structadi__eth___buf_desc__t.html#a20466e33c41ef739e6613782d826bc81", null ],
+      [ "egressCapt", "structadi__eth___buf_desc__t.html#ae3c2e9a93e2ce027bf88f31214196228", null ],
+      [ "pBuf", "structadi__eth___buf_desc__t.html#af20e64d32db773e418fbd3a5d970f95b", null ],
+      [ "port", "structadi__eth___buf_desc__t.html#a3d730255c57b22cd2f3e569973ba8d27", null ],
+      [ "prio", "structadi__eth___buf_desc__t.html#a46a9d580736db8b0398c053c12fd1ead", null ],
+      [ "refCount", "structadi__eth___buf_desc__t.html#a3f371d807e2a3c8d2772e4935556ac02", null ],
+      [ "timestamp", "structadi__eth___buf_desc__t.html#a0a9389bc82dc449217a0867ef3daefe0", null ],
+      [ "timestampExt", "structadi__eth___buf_desc__t.html#acf2c4999522ac40afad25344eb16f8c9", null ],
+      [ "timestampValid", "structadi__eth___buf_desc__t.html#aaacd41f036fbf5ad187da4679a873e86", null ],
+      [ "trxSize", "structadi__eth___buf_desc__t.html#a24715ce826bd7c9f817231b1e8515d0b", null ]
+    ] ],
+    [ "adi_mac_ForwardMode_t", "structadi__mac___forward_mode__t.html", [
+      [ "P1_FWD_UNK_TO_HOST", "structadi__mac___forward_mode__t.html#ae90e597f24b9375b9a9bd17a1394f37b", null ],
+      [ "P1_FWD_UNK_TO_P2", "structadi__mac___forward_mode__t.html#ad00236b5cc4bc6d8f502e7f4a707ef3d", null ],
+      [ "P2_FWD_UNK_TO_HOST", "structadi__mac___forward_mode__t.html#adf5db676b0ea76471cf60a2679e033b1", null ],
+      [ "P2_FWD_UNK_TO_P1", "structadi__mac___forward_mode__t.html#a80ebf1e86a6b658a953003c0461000f9", null ]
+    ] ],
+    [ "adi_mac_FifoSizes_t", "structadi__mac___fifo_sizes__t.html", [
+      [ "htxSize", "structadi__mac___fifo_sizes__t.html#acbcf6a88aa0b84b82ffc302d6b1ca404", null ],
+      [ "p1RxHiSize", "structadi__mac___fifo_sizes__t.html#ae474d9646cf63a60b0f35a7eed37b3e6", null ],
+      [ "p1RxLoSize", "structadi__mac___fifo_sizes__t.html#a3b7d93a794ceb8a08377186925d7b251", null ],
+      [ "p1TxSize", "structadi__mac___fifo_sizes__t.html#ac67914bc093a78cd296bf86f0747dd98", null ],
+      [ "p2RxHiSize", "structadi__mac___fifo_sizes__t.html#ad79ea1643c7700d95b67f61a59e9d0ff", null ],
+      [ "p2RxLoSize", "structadi__mac___fifo_sizes__t.html#a7eb245199f1802ab108a14ca2c863f41", null ],
+      [ "p2TxSize", "structadi__mac___fifo_sizes__t.html#a9e8c94cdd4ef0c1f49f1fc35318cde14", null ]
+    ] ],
+    [ "adi_mac_TsTimerConfig_t", "structadi__mac___ts_timer_config__t.html", [
+      [ "dutyCycle", "structadi__mac___ts_timer_config__t.html#a70a73196fd47b8dc9f6a64043b96269f", null ],
+      [ "idleState", "structadi__mac___ts_timer_config__t.html#aca8a146e9f8eab77d0a843794aebfc1b", null ],
+      [ "periodNs", "structadi__mac___ts_timer_config__t.html#aaa3d61b693e7814ab6624684f5adc976", null ],
+      [ "startTimeNs", "structadi__mac___ts_timer_config__t.html#a8cadd51ce67c65ed77b4cdf7ee764d13", null ]
+    ] ],
+    [ "adi_mac_TsTimespec_t", "structadi__mac___ts_timespec__t.html", [
+      [ "nsec", "structadi__mac___ts_timespec__t.html#a0843f4a88658d210eb4d2cb288d65acc", null ],
+      [ "sec", "structadi__mac___ts_timespec__t.html#a9f9e4ac39bab7b2cb1e1d3efbf58f810", null ]
+    ] ],
+    [ "adi_mac_OaErrorStats_t", "structadi__mac___oa_error_stats__t.html", [
+      [ "fdCount", "structadi__mac___oa_error_stats__t.html#a9e64fc8017b50e525d98b0d44beaa8a2", null ],
+      [ "ftrParityErrorCount", "structadi__mac___oa_error_stats__t.html#ad1112917f43d6563f78e2f6ec2dc54d9", null ],
+      [ "hdrParityErrorCount", "structadi__mac___oa_error_stats__t.html#ae70d0b670740ffa938f5d123e75969ad", null ],
+      [ "invalidEvCount", "structadi__mac___oa_error_stats__t.html#a3c3ce8ad912c6405fa3545a110f7bcee", null ],
+      [ "invalidSvCount", "structadi__mac___oa_error_stats__t.html#a0e2c5b570d78f37c9035716702b7d9c5", null ],
+      [ "syncErrorCount", "structadi__mac___oa_error_stats__t.html#aa3e4c7a3ed522cb8ac8a4be5379b04c1", null ]
+    ] ],
+    [ "adi_mac_StatusRegisters_t", "structadi__mac___status_registers__t.html", [
+      [ "p1Status", "structadi__mac___status_registers__t.html#a6d0a57d7fc08b111c56f89c41baa22f1", null ],
+      [ "p1StatusMasked", "structadi__mac___status_registers__t.html#acff2bfb93d222c34e44eb71dec6265f6", null ],
+      [ "p2Status", "structadi__mac___status_registers__t.html#ad3f2b3ef71fa1a55cd8f15c7f1b4e98e", null ],
+      [ "p2StatusMasked", "structadi__mac___status_registers__t.html#aa6808a07a46fb1c6bf735c731bbe5775", null ],
+      [ "status0", "structadi__mac___status_registers__t.html#aa1a3804be0bb62cd3aa7d657e0a2d87f", null ],
+      [ "status0Masked", "structadi__mac___status_registers__t.html#a68fa5647fdc0acc0444bdcc794090772", null ],
+      [ "status1", "structadi__mac___status_registers__t.html#a02528c5b4be25835044a45288360c5aa", null ],
+      [ "status1Masked", "structadi__mac___status_registers__t.html#a2cc844fd39b5c6fbef2de261372dd516", null ]
+    ] ],
+    [ "adi_mac_FrameStruct_t", "structadi__mac___frame_struct__t.html", [
+      [ "header", "structadi__mac___frame_struct__t.html#abaad8c91fa30406fa493af7716dee414", null ],
+      [ "pBufDesc", "structadi__mac___frame_struct__t.html#a46d0ecfe6d281ed4d086011ef3953b1d", null ]
+    ] ],
+    [ "adi_mac_Queue_t", "structadi__mac___queue__t.html", [
+      [ "head", "structadi__mac___queue__t.html#af03066b3f8be45af4ade7390e3493f4a", null ],
+      [ "numEntries", "structadi__mac___queue__t.html#a6dc077783a49b1d4bdbd10d7605629dc", null ],
+      [ "pEntries", "structadi__mac___queue__t.html#a56b9925b80dcf111c66454fe6f89ec74", null ],
+      [ "tail", "structadi__mac___queue__t.html#a84e232a342c7cbe2b4a12e158ca33dc4", null ]
+    ] ],
+    [ "adi_mac_Device_t", "structadi__mac___device__t.html", [
+      [ "addrFilterActive", "structadi__mac___device__t.html#a0ed3cc0bbf530bd110d672b594ce9bc1", null ],
+      [ "adinDevice", "structadi__mac___device__t.html#a84b5a67f4f1f107cc2cb1f466e0f5a0d", null ],
+      [ "cbFunc", "structadi__mac___device__t.html#ab742d137c3fff9d4afaa2b2e0d978a8f", null ],
+      [ "cbParam", "structadi__mac___device__t.html#a08a114c5eb56a01780ca4e21536aee79", null ],
+      [ "cnt", "structadi__mac___device__t.html#a850906d4991bbb8f158ea95ef237c0ae", null ],
+      [ "configSync", "structadi__mac___device__t.html#a72209cf0a9d104202db1cc3c3d0b43ac", null ],
+      [ "ctrlRxBuf", "structadi__mac___device__t.html#a4c20eb75abb3793ed5a14c0569a363a0", null ],
+      [ "ctrlTxBuf", "structadi__mac___device__t.html#a0eeb070f9782dc66d4b3d91ee7783184", null ],
+      [ "fcsCheckEn", "structadi__mac___device__t.html#aae27b32f8e78ab3867ca8264da399b01", null ],
+      [ "irqMask0", "structadi__mac___device__t.html#ab8e50f468566ed8ef25fe199b515f28c", null ],
+      [ "irqMask1", "structadi__mac___device__t.html#a98cb18d859503e8d72fef7aa3456fb1f", null ],
+      [ "oaCps", "structadi__mac___device__t.html#ad7a93d83ed351d8132f0a18db99f3d60", null ],
+      [ "oaErrorStats", "structadi__mac___device__t.html#a4a67a69064f03210e76178775b960a60", null ],
+      [ "oaMaxChunkCount", "structadi__mac___device__t.html#a608a9f5baa43daa1c7c1e1d684679acc", null ],
+      [ "oaRca", "structadi__mac___device__t.html#ab747ba69ef5cd9d518fbd21504580c0b", null ],
+      [ "oaRxBackupBuf", "structadi__mac___device__t.html#a10064f05e8c31077ac91d06175575917", null ],
+      [ "oaRxBufChunkStart", "structadi__mac___device__t.html#aaa90929abd53552ddf2f649cd03874a0", null ],
+      [ "oaRxBufTrxSize", "structadi__mac___device__t.html#a1c6dfd6bccde6af1acc32e09d4c30394", null ],
+      [ "oaRxCurBufByteOffset", "structadi__mac___device__t.html#a85956bf2ad2af8e676c6d294e7df5229", null ],
+      [ "oaRxCurBufIdx", "structadi__mac___device__t.html#a16ab2b507b8a3fcdbdc5ac6d3f94007b", null ],
+      [ "oaRxUseBackupBuf", "structadi__mac___device__t.html#a90461e6c99524c8e3ef9947c2f45a022", null ],
+      [ "oaTimestampParity", "structadi__mac___device__t.html#a15d40bea0d0fad9bda0ca0f0e9ef8fbb", null ],
+      [ "oaTimestampSplit", "structadi__mac___device__t.html#acea018e12419ef3ce0fb0d26a294714f", null ],
+      [ "oaTrxSize", "structadi__mac___device__t.html#a642e22ee3e1cf49e5f700cc2a8e88092", null ],
+      [ "oaTxc", "structadi__mac___device__t.html#af92dff083662376c15854aced8b36791", null ],
+      [ "oaTxCurBufByteOffset", "structadi__mac___device__t.html#ac1f364b85486dfed75656b4b2ba311c4", null ],
+      [ "oaTxCurBufIdx", "structadi__mac___device__t.html#a92656e088e1ba26683c795e8d2a36291", null ],
+      [ "oaValidFlag", "structadi__mac___device__t.html#aab129e8f44ec03bc5232a440bb160676", null ],
+      [ "pendingCtrl", "structadi__mac___device__t.html#a85f508f8e07d835b7de8d18624c0a0c1", null ],
+      [ "phyAddr", "structadi__mac___device__t.html#aa69085beedd4e9be5a0879ad9e7b2969", null ],
+      [ "phyIrqMask", "structadi__mac___device__t.html#a4c90652cf2c99c8b5a23a71717748157", null ],
+      [ "pRegData", "structadi__mac___device__t.html#a05a966d97dc284b906f3cacd7ae60b05", null ],
+      [ "pRxQueue", "structadi__mac___device__t.html#aa7b7a2af52d3c7949140eb8a76f41f7b", null ],
+      [ "regAddr", "structadi__mac___device__t.html#ae4ac3f35e0c04dabba05f9c1ff4e8410", null ],
+      [ "rxQueueLp", "structadi__mac___device__t.html#a98d0d1cbc913fad93ec000f2ad5bf10c", null ],
+      [ "rxQueueLpFrames", "structadi__mac___device__t.html#ad443ebb29a2f46b1e718f28057d3eb33", null ],
+      [ "spiErr", "structadi__mac___device__t.html#a5628fd6085bc8031fdc20d8ed9244640", null ],
+      [ "spiState", "structadi__mac___device__t.html#a60a7a74890d9a684ce73a34a0eb0a18e", null ],
+      [ "state", "structadi__mac___device__t.html#abdf649b30c6d2ba5d632437cdbed8c39", null ],
+      [ "statusRegisters", "structadi__mac___device__t.html#afae3ab48c07f03ba4f7800c3ae500eae", null ],
+      [ "timestampFormat", "structadi__mac___device__t.html#a6398aa067acc36695adcb289d42e5799", null ],
+      [ "txQueue", "structadi__mac___device__t.html#a21032fa75490d24e78238994ba866dfb", null ],
+      [ "txQueueFrames", "structadi__mac___device__t.html#a87cc4b5d7a0866742c6526dff10b3edc", null ],
+      [ "wnr", "structadi__mac___device__t.html#a86a0a12794f6973baa3c02b28965ada8", null ]
+    ] ],
+    [ "ADI_MAC_ADDR_MASK_MAX", "group__mac.html#gacd9997f5f568541c1a98d1dabdd8dcff", null ],
+    [ "ADI_MAC_ADDR_NUM_ENTRIES", "group__mac.html#ga1ad1fb949415afd2a0db25f573ccf923", null ],
+    [ "ADI_MAC_CALLBACK_STATUS_FCS_ERROR", "group__mac.html#ga418f3a76d9dd6c94a95f095f23534362", null ],
+    [ "ADI_MAC_CALLBACK_STATUS_OK", "group__mac.html#ga86f314880a0aa2edda27a47087659740", null ],
+    [ "ADI_MAC_CALLBACK_STATUS_RX_BUF_OVF", "group__mac.html#ga938d453d7a5740d8be1634ea18a0a394", null ],
+    [ "ADI_MAC_DEVICE_SIZE", "group__mac.html#gadc674eb8ba7e4242debde0261acbc858", null ],
+    [ "ADI_MAC_DEVICE_SIZE_COMMON", "group__mac.html#ga4d0fdade12e6ed3550041deca59cd024", null ],
+    [ "ADI_MAC_DEVICE_SIZE_OA", "group__mac.html#gaf2fafb32cd1b6e65f9d5e3be32096dfc", null ],
+    [ "ADI_MAC_DEVICE_SIZE_QUEUE_HI", "group__mac.html#gac12e0915efcbbf915a9e0fa924a4c7a3", null ],
+    [ "ADI_MAC_FIFO_MAX_SIZE", "group__mac.html#gab7b8b4752681b2c948613f29b8dc8a3c", null ],
+    [ "ADI_MAC_IF_UP_MAX_RETRIES", "group__mac.html#gad9ce108db86d4ac02efbcfc94cb2ac52", null ],
+    [ "ADI_MAC_INIT_MAX_RETRIES", "group__mac.html#ga05af30efa24ed7dee60a309552addbd7", null ],
+    [ "ADI_MAC_MDIO_MAX_COUNT", "group__mac.html#gae1bb30b27458742dc231b614fe978518", null ],
+    [ "ADI_MAC_MDIO_MAX_RETRIES", "group__mac.html#ga711860cbabe70c6740bedeed960e071e", null ],
+    [ "ADI_MAC_MDIO_PARALLEL_COUNT", "group__mac.html#ga37c8736ffee373ee7b705c96cba696ad", null ],
+    [ "ADI_MAC_PHY_STATUS_INIT_VAL", "group__mac.html#ga0a3add4ceeb8a319995cd7bf1e6f73ce", null ],
+    [ "ADI_MAC_SPI_ACCESS_SIZE", "group__mac.html#ga64edd1a44e0548ae5e43dfa5a9d0319f", null ],
+    [ "ADI_MAC_SPI_ACCESS_UNIT_TYPE", "group__mac.html#gac3137fea21a2c0aea3c812afc4cf012b", null ],
+    [ "ADI_MAC_SPI_CTRL_BUF_SIZE", "group__mac.html#ga7703787d9b49b32f0c042f5b54a5601b", null ],
+    [ "ADI_MAC_SPI_READ", "group__mac.html#ga81ca48a0d4a00a309e00d11cfbb5e375", null ],
+    [ "ADI_MAC_SPI_TRANSACTION_CONTROL", "group__mac.html#gad77eaf70e4203c75973f8623528ad333", null ],
+    [ "ADI_MAC_SPI_TRANSACTION_DATA", "group__mac.html#gac14f30c34f69df90b962627f029797d6", null ],
+    [ "ADI_MAC_SPI_WRITE", "group__mac.html#ga9fda12e80e8a6f7cfbfefa97979ba79b", null ],
+    [ "ADI_MAC_TS_1588_NS_MASK", "group__mac.html#ga5e90cb00dc6b7e9890223a0e2f3f72db", null ],
+    [ "ADI_MAC_TS_1588_SEC_MASK", "group__mac.html#ga47bf250580d97a902433e28414967f08", null ],
+    [ "ADI_MAC_TS_1588_SEC_POS", "group__mac.html#ga458811ccb595cfab2f09c32781e42e28", null ],
+    [ "ADI_MAC_TS_FREE_CNT_LSB_IN_NS", "group__mac.html#gad23ebc5bf76317a23d9654343b5a6513", null ],
+    [ "ADI_MAC_TS_MIN_NS", "group__mac.html#ga8026e7363cb4d4f2eb67fa8baf1c30f5", null ],
+    [ "ADI_MAC_TS_ONE_SECOND_IN_NS", "group__mac.html#ga51c3192b54b682561f0e73f190335cbb", null ],
+    [ "ADI_MAC_TS_QE_MASK", "group__mac.html#gaf6871672d7534fe10cfebb2ddc1d4bba", null ],
+    [ "ADI_OA_RX_BACKUP_BUF_CHUNK_COUNT", "group__mac.html#ga8a755350051bda40ba90eeef1f3b2807", null ],
+    [ "ADI_OA_RX_BACKUP_BUF_SIZE", "group__mac.html#ga2270f76034eebf4c205de57c7edadd63", null ],
+    [ "ADI_SPI_TIMEOUT", "group__mac.html#gaa70f9e182469bd80269b70683e064581", null ],
+    [ "DEVTYPE", "group__mac.html#ga1620728be1cbe335b8ef23fae13b186f", null ],
+    [ "FCS_SIZE", "group__mac.html#ga1c538eaa7c5b23999d65d554c6cc8496", null ],
+    [ "HTON16", "group__mac.html#ga56b71b8eeb28ff16c668d353f8cbe1eb", null ],
+    [ "HTON32", "group__mac.html#ga166e24ee0eb388f777d5fdc2eb942dc4", null ],
+    [ "MAX_FRAME_SIZE", "group__mac.html#gad15d35a0d29a9dbf9324e3859ce3b008", null ],
+    [ "MIN_FRAME_SIZE", "group__mac.html#ga50a207c28cb59d177a9db611cc1faea4", null ],
+    [ "REGADDR", "group__mac.html#gae3dced2ef5279e3c7ea8ee316b3d47ad", null ],
+    [ "RST_MAC_ONLY_KEY1", "group__mac.html#ga239129b76c2238ad1d043fdfe2b8c5b7", null ],
+    [ "RST_MAC_ONLY_KEY2", "group__mac.html#ga16d453f4e7e0fe468c08275566d96fe7", null ],
+    [ "RX_QUEUE_NUM_ENTRIES", "group__mac.html#gaf93563d8a4c5f56dd65f68822bb77233", null ],
+    [ "RX_QUEUE_NUM_ENTRIES_RAW", "group__mac.html#ga1539811602dc0360f7ebad0f17b22a53", null ],
+    [ "TX_QUEUE_NUM_ENTRIES", "group__mac.html#gacafec0dc026da253178cde746b8130b5", null ],
+    [ "TX_QUEUE_NUM_ENTRIES_RAW", "group__mac.html#gaf81ca615451f7f042c5fad6c63361c2a", null ],
+    [ "adi_eth_LinkStatus_e", "group__mac.html#gaf32e59fc221a9707d5f9c2d8b897e525", [
+      [ "ADI_ETH_LINK_STATUS_DOWN", "group__mac.html#ggaf32e59fc221a9707d5f9c2d8b897e525ad94c936ebbff68041b2c316323fd4cfd", null ],
+      [ "ADI_ETH_LINK_STATUS_UP", "group__mac.html#ggaf32e59fc221a9707d5f9c2d8b897e525a8dfcc7a4f28926ed358f83eda0c8f2f6", null ]
+    ] ],
+    [ "adi_eth_ResetType_e", "group__mac.html#gaee7ffa1baa6ef36a087b76a44831d9da", [
+      [ "ADI_ETH_RESET_TYPE_MAC_ONLY", "group__mac.html#ggaee7ffa1baa6ef36a087b76a44831d9daab36bab4b10891928376b7c49b2ad80bd", null ],
+      [ "ADI_ETH_RESET_TYPE_MAC_PHY", "group__mac.html#ggaee7ffa1baa6ef36a087b76a44831d9daac0fb5425234338e69fb0f3fc5958dded", null ]
+    ] ],
+    [ "adi_mac_EgressCapture_e", "group__mac.html#ga9fe6bdd6bd80b35aba6334779ad340f0", [
+      [ "ADI_MAC_EGRESS_CAPTURE_NONE", "group__mac.html#gga9fe6bdd6bd80b35aba6334779ad340f0a172bc4706fb94c340c6d76561ddd812e", null ],
+      [ "ADI_MAC_EGRESS_CAPTURE_A", "group__mac.html#gga9fe6bdd6bd80b35aba6334779ad340f0ad9a867e4d73198d5738840103be8c801", null ],
+      [ "ADI_MAC_EGRESS_CAPTURE_B", "group__mac.html#gga9fe6bdd6bd80b35aba6334779ad340f0a8ba5cd0a9bfd013c2ff7c141f6aba8ba", null ],
+      [ "ADI_MAC_EGRESS_CAPTURE_C", "group__mac.html#gga9fe6bdd6bd80b35aba6334779ad340f0a61519359f316fd34b9fcac621d2f9844", null ]
+    ] ],
+    [ "adi_mac_FifoClrMode_e", "group__mac.html#ga90cbc5f3c5a2059cbf60b67d4a5e0b4d", [
+      [ "ADI_MAC_CLEAR_ALL_FIFOS", "group__mac.html#gga90cbc5f3c5a2059cbf60b67d4a5e0b4dabe9d76c9a2a46a13a626644be0252f59", null ],
+      [ "ADI_MAC_CLEAR_P2P_FIFOS", "group__mac.html#gga90cbc5f3c5a2059cbf60b67d4a5e0b4da09c683a5016412b6b0c1a5016070ee8d", null ],
+      [ "ADI_MAC_CLEAR_RX_FIFO", "group__mac.html#gga90cbc5f3c5a2059cbf60b67d4a5e0b4dabb78fbbb0e4b4e1a9c77c26e7cf3b3be", null ]
+    ] ],
+    [ "adi_mac_HtxFifoSize_e", "group__mac.html#gabe144176d5cf56c1915a3e570bf7fdef", [
+      [ "ADI_MAC_HTX_FIFO_SIZE_0K", "group__mac.html#ggabe144176d5cf56c1915a3e570bf7fdefa9637d0427ed5ca9410e6d345ddd84ff8", null ],
+      [ "ADI_MAC_HTX_FIFO_SIZE_2K", "group__mac.html#ggabe144176d5cf56c1915a3e570bf7fdefae5dc984d449a65ae44652bd93e7f9f01", null ],
+      [ "ADI_MAC_HTX_FIFO_SIZE_4K", "group__mac.html#ggabe144176d5cf56c1915a3e570bf7fdefaea6ac4ff8329497967253a22c4870f91", null ],
+      [ "ADI_MAC_HTX_FIFO_SIZE_6K", "group__mac.html#ggabe144176d5cf56c1915a3e570bf7fdefa48ad8ed6611b5079655694dff1417ee0", null ],
+      [ "ADI_MAC_HTX_FIFO_SIZE_8K", "group__mac.html#ggabe144176d5cf56c1915a3e570bf7fdefa2c4a12e923afa4f2f8739f672ce684bf", null ],
+      [ "ADI_MAC_HTX_FIFO_SIZE_10K", "group__mac.html#ggabe144176d5cf56c1915a3e570bf7fdefad3c614b9613af4c57cf238ad15b5acc5", null ],
+      [ "ADI_MAC_HTX_FIFO_SIZE_12K", "group__mac.html#ggabe144176d5cf56c1915a3e570bf7fdefa1a801ef3a5e71863c15ed7104aa27a1b", null ],
+      [ "ADI_MAC_HTX_FIFO_SIZE_14K", "group__mac.html#ggabe144176d5cf56c1915a3e570bf7fdefa4679a91bd00d895bc1b116858cf20101", null ],
+      [ "ADI_MAC_HTX_FIFO_SIZE_16K", "group__mac.html#ggabe144176d5cf56c1915a3e570bf7fdefa21effa75e42e259161297793e5e6577d", null ]
+    ] ],
+    [ "adi_mac_InterruptEvt_e", "group__mac.html#ga596e18d2751971a252c829dfdb60e6d1", [
+      [ "ADI_MAC_EVT_LINK_CHANGE", "group__mac.html#gga596e18d2751971a252c829dfdb60e6d1af69d1663f117190dc706663ea6d83062", null ],
+      [ "ADI_MAC_EVT_TX_RDY", "group__mac.html#gga596e18d2751971a252c829dfdb60e6d1aa842c12d954a4ce7f8f239d5ca42b36b", null ],
+      [ "ADI_MAC_EVT_P1_RX_RDY", "group__mac.html#gga596e18d2751971a252c829dfdb60e6d1a22824bf2479a2579d99edd59f3ecc9b0", null ],
+      [ "ADI_MAC_EVT_STATUS", "group__mac.html#gga596e18d2751971a252c829dfdb60e6d1aa1b24452c415eccf56fda98e7fd1eeaa", null ],
+      [ "ADI_MAC_EVT_DYN_TBL_UPDATE", "group__mac.html#gga596e18d2751971a252c829dfdb60e6d1a855a7357bcd8f78e9f11f646515bd0fa", null ],
+      [ "ADI_MAC_EVT_RX_FRAME_RDY", "group__mac.html#gga596e18d2751971a252c829dfdb60e6d1a399f12b709296b4645e10e33d0f12921", null ],
+      [ "ADI_MAC_EVT_TIMESTAMP_RDY", "group__mac.html#gga596e18d2751971a252c829dfdb60e6d1a9f59de7c4469e50ea5b5d909e354e16e", null ],
+      [ "ADI_MAC_EVT_MAX", "group__mac.html#gga596e18d2751971a252c829dfdb60e6d1a95b1716b066f50b3117507b44c95f652", null ]
+    ] ],
+    [ "adi_mac_OaCps_e", "group__mac.html#ga99e3b87728292e9b5521bf69e7c4d253", [
+      [ "ADI_MAC_OA_CPS_8BYTE", "group__mac.html#gga99e3b87728292e9b5521bf69e7c4d253a4fe3c95b4813ae3a7df7336095aef481", null ],
+      [ "ADI_MAC_OA_CPS_16BYTE", "group__mac.html#gga99e3b87728292e9b5521bf69e7c4d253a219e18de56b7bc53251c18b140878a68", null ],
+      [ "ADI_MAC_OA_CPS_32BYTE", "group__mac.html#gga99e3b87728292e9b5521bf69e7c4d253a6f06b9c7c5ce857a8a0595a3b4da22aa", null ],
+      [ "ADI_MAC_OA_CPS_64BYTE", "group__mac.html#gga99e3b87728292e9b5521bf69e7c4d253a42c31ea841dcf51f96a02d7c583d65db", null ]
+    ] ],
+    [ "adi_mac_OaValidFlag_e", "group__mac.html#ga6bd0356ecbec200c5fcecc2776d1f8d5", [
+      [ "ADI_MAC_OA_VALID_FLAG_NONE", "group__mac.html#gga6bd0356ecbec200c5fcecc2776d1f8d5a7ec8bb4c344122ffe419f79dda792692", null ],
+      [ "ADI_MAC_OA_VALID_FLAG_START", "group__mac.html#gga6bd0356ecbec200c5fcecc2776d1f8d5ada9145b0d7b07c9dcb7fb7c67cb97067", null ],
+      [ "ADI_MAC_OA_VALID_FLAG_END", "group__mac.html#gga6bd0356ecbec200c5fcecc2776d1f8d5a2b347bd06fa62322b89e088770b103cc", null ]
+    ] ],
+    [ "adi_mac_PtxFifoSize_e", "group__mac.html#gaff1dd2b345c6e53b14fc2b902655e9ff", [
+      [ "ADI_MAC_PTX_FIFO_SIZE_0K", "group__mac.html#ggaff1dd2b345c6e53b14fc2b902655e9ffa52aedfbb06831ec79b62a3ad9d566045", null ],
+      [ "ADI_MAC_PTX_FIFO_SIZE_2K", "group__mac.html#ggaff1dd2b345c6e53b14fc2b902655e9ffa5769ca08a0e37e9901b0ca6e98a72cc1", null ],
+      [ "ADI_MAC_PTX_FIFO_SIZE_4K", "group__mac.html#ggaff1dd2b345c6e53b14fc2b902655e9ffa69b1c26f44312b1d6aa7432b15aef57a", null ],
+      [ "ADI_MAC_PTX_FIFO_SIZE_6K", "group__mac.html#ggaff1dd2b345c6e53b14fc2b902655e9ffa6c4e614fa1fd22066aac623bad295cb0", null ],
+      [ "ADI_MAC_PTX_FIFO_SIZE_8K", "group__mac.html#ggaff1dd2b345c6e53b14fc2b902655e9ffa15e3efd1b26ccc47155a742c500cb1cb", null ],
+      [ "ADI_MAC_PTX_FIFO_SIZE_10K", "group__mac.html#ggaff1dd2b345c6e53b14fc2b902655e9ffa1b6f29538e61c8bee35940a3f679e6e6", null ],
+      [ "ADI_MAC_PTX_FIFO_SIZE_12K", "group__mac.html#ggaff1dd2b345c6e53b14fc2b902655e9ffaaa1782ff602578070407e1d6ab48c90c", null ],
+      [ "ADI_MAC_PTX_FIFO_SIZE_14K", "group__mac.html#ggaff1dd2b345c6e53b14fc2b902655e9ffaa5682c726192b32ddba93326c30fa8f7", null ],
+      [ "ADI_MAC_PTX_FIFO_SIZE_16K", "group__mac.html#ggaff1dd2b345c6e53b14fc2b902655e9ffa47e613bd56b25928a2561d6f24ac8f5a", null ]
+    ] ],
+    [ "adi_mac_RxFifoPrio_e", "group__mac.html#ga00cc8a8b829d6251008d793be4ea5ce7", [
+      [ "ADI_MAC_RX_FIFO_PRIO_LOW", "group__mac.html#gga00cc8a8b829d6251008d793be4ea5ce7a3607119d8ef588975ec3dd6776200fe9", null ],
+      [ "ADI_MAC_RX_FIFO_PRIO_HIGH", "group__mac.html#gga00cc8a8b829d6251008d793be4ea5ce7ac234fbafe5e17f1f9e97493e22d97880", null ]
+    ] ],
+    [ "adi_mac_RxFifoSize_e", "group__mac.html#ga0ed0e5b7369c408a157b3c2d0c77f24c", [
+      [ "ADI_MAC_RX_FIFO_SIZE_0K", "group__mac.html#gga0ed0e5b7369c408a157b3c2d0c77f24cab4b7c74fe4cdd014bbcfc7ca630d5c3d", null ],
+      [ "ADI_MAC_RX_FIFO_SIZE_2K", "group__mac.html#gga0ed0e5b7369c408a157b3c2d0c77f24caf32fa0a57a917fdc4483747055965c9b", null ],
+      [ "ADI_MAC_RX_FIFO_SIZE_4K", "group__mac.html#gga0ed0e5b7369c408a157b3c2d0c77f24ca385e7032807a821d78393c10ceaadd4c", null ],
+      [ "ADI_MAC_RX_FIFO_SIZE_6K", "group__mac.html#gga0ed0e5b7369c408a157b3c2d0c77f24ca1f2b90ef6f6df3726544328e3dec768a", null ],
+      [ "ADI_MAC_RX_FIFO_SIZE_8K", "group__mac.html#gga0ed0e5b7369c408a157b3c2d0c77f24cadc9dec9e2e51ebda087557aab4109d37", null ],
+      [ "ADI_MAC_RX_FIFO_SIZE_10K", "group__mac.html#gga0ed0e5b7369c408a157b3c2d0c77f24caecd2b6257d265a9cdd630633c3539ff8", null ],
+      [ "ADI_MAC_RX_FIFO_SIZE_12K", "group__mac.html#gga0ed0e5b7369c408a157b3c2d0c77f24ca29548f1b1a98610c9a6297908bc1c02b", null ],
+      [ "ADI_MAC_RX_FIFO_SIZE_14K", "group__mac.html#gga0ed0e5b7369c408a157b3c2d0c77f24ca1fb7d0161da6bd52b3c065332f0c116e", null ],
+      [ "ADI_MAC_RX_FIFO_SIZE_16K", "group__mac.html#gga0ed0e5b7369c408a157b3c2d0c77f24cac649dee7240e311ac532b645a23961e2", null ]
+    ] ],
+    [ "adi_mac_SpiState_e", "group__mac.html#ga2642a216450f6fbc7679bf7bb4a8069e", [
+      [ "ADI_MAC_SPI_STATE_READY", "group__mac.html#gga2642a216450f6fbc7679bf7bb4a8069ea40c47801ac2f0f4b4660ab08fbfa5488", null ],
+      [ "ADI_MAC_SPI_STATE_RX", "group__mac.html#gga2642a216450f6fbc7679bf7bb4a8069ea9aa70b7a195dfa41821ab4f6e63b1961", null ],
+      [ "ADI_MAC_SPI_STATE_RX_FRAME", "group__mac.html#gga2642a216450f6fbc7679bf7bb4a8069ea49c2fc18756942eeb05880f00223d121", null ],
+      [ "ADI_MAC_SPI_STATE_TX", "group__mac.html#gga2642a216450f6fbc7679bf7bb4a8069ea47c8d886dd77968a490a55c455164b04", null ],
+      [ "ADI_MAC_SPI_STATE_TX_FRAME", "group__mac.html#gga2642a216450f6fbc7679bf7bb4a8069ea0b0639612cfd23e045406cf64b5557ea", null ]
+    ] ],
+    [ "adi_mac_State_e", "group__mac.html#ga5f8228e638224855f0b2baa6297de8f9", [
+      [ "ADI_MAC_STATE_UNINITIALIZED", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9a0f7e0571e1ff63757c892c0d840ec5df", null ],
+      [ "ADI_MAC_STATE_INITIALIZED", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9a0a7cd8c3a4e8f05e1358ed6007122374", null ],
+      [ "ADI_MAC_STATE_READY", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9a6981e47e69e28c4beb99f66dc82daa15", null ],
+      [ "ADI_MAC_STATE_TX_FRAME", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9a520b92d980ab4bb678079799664a9d15", null ],
+      [ "ADI_MAC_STATE_RX_FRAME", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9a632353379e8703e37ff0c1dea5b37d57", null ],
+      [ "ADI_MAC_STATE_CONTROL_START", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9af6805677fe31b040a8ebc6d9cfcd66eb", null ],
+      [ "ADI_MAC_STATE_CONTROL_END", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9ab1a992a177d104d9d1d9e68cd747284b", null ],
+      [ "ADI_MAC_STATE_DATA_START", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9a6d10b8028939394bb3f9df33bec6226b", null ],
+      [ "ADI_MAC_STATE_DATA_END", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9a26b31d9f99c3320d8586b7d262589254", null ],
+      [ "ADI_MAC_STATE_IRQ_START", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9a8f1b6109b6961f36f1c8730c9cf88cdb", null ],
+      [ "ADI_MAC_STATE_DATA_READ_STATUS", "group__mac.html#gga5f8228e638224855f0b2baa6297de8f9a8f6a563be32b7ffd44f914a102032d97", null ]
+    ] ],
+    [ "adi_mac_TsFormat_e", "group__mac.html#gab15ff3790a57b045fb990cc5550c60ef", [
+      [ "ADI_MAC_TS_FORMAT_NONE", "group__mac.html#ggab15ff3790a57b045fb990cc5550c60efaf386087bbeb5721f141bcfac6ddb557b", null ],
+      [ "ADI_MAC_TS_FORMAT_32B_FREE", "group__mac.html#ggab15ff3790a57b045fb990cc5550c60efa482e20945b9ac32e13cf4fb3861825c9", null ],
+      [ "ADI_MAC_TS_FORMAT_32B_1588", "group__mac.html#ggab15ff3790a57b045fb990cc5550c60efa5314c73f0d0560e0f561765563521345", null ],
+      [ "ADI_MAC_TS_FORMAT_64B_1588", "group__mac.html#ggab15ff3790a57b045fb990cc5550c60efa97a6aaaa1050043e164c943a25df9a16", null ]
+    ] ]
+];

@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['oacps_431',['oaCps',['../structadi__mac___device__t.html#ad7a93d83ed351d8132f0a18db99f3d60',1,'adi_mac_Device_t']]],
+  ['oaerrorstats_432',['oaErrorStats',['../structadi__mac___device__t.html#a4a67a69064f03210e76178775b960a60',1,'adi_mac_Device_t']]],
+  ['oamaxchunkcount_433',['oaMaxChunkCount',['../structadi__mac___device__t.html#a608a9f5baa43daa1c7c1e1d684679acc',1,'adi_mac_Device_t']]],
+  ['oarca_434',['oaRca',['../structadi__mac___device__t.html#ab747ba69ef5cd9d518fbd21504580c0b',1,'adi_mac_Device_t']]],
+  ['oarxbackupbuf_435',['oaRxBackupBuf',['../structadi__mac___device__t.html#a10064f05e8c31077ac91d06175575917',1,'adi_mac_Device_t']]],
+  ['oarxbufchunkstart_436',['oaRxBufChunkStart',['../structadi__mac___device__t.html#aaa90929abd53552ddf2f649cd03874a0',1,'adi_mac_Device_t']]],
+  ['oarxbuftrxsize_437',['oaRxBufTrxSize',['../structadi__mac___device__t.html#a1c6dfd6bccde6af1acc32e09d4c30394',1,'adi_mac_Device_t']]],
+  ['oarxcurbufbyteoffset_438',['oaRxCurBufByteOffset',['../structadi__mac___device__t.html#a85956bf2ad2af8e676c6d294e7df5229',1,'adi_mac_Device_t']]],
+  ['oarxcurbufidx_439',['oaRxCurBufIdx',['../structadi__mac___device__t.html#a16ab2b507b8a3fcdbdc5ac6d3f94007b',1,'adi_mac_Device_t']]],
+  ['oarxusebackupbuf_440',['oaRxUseBackupBuf',['../structadi__mac___device__t.html#a90461e6c99524c8e3ef9947c2f45a022',1,'adi_mac_Device_t']]],
+  ['oatimestampparity_441',['oaTimestampParity',['../structadi__mac___device__t.html#a15d40bea0d0fad9bda0ca0f0e9ef8fbb',1,'adi_mac_Device_t']]],
+  ['oatimestampsplit_442',['oaTimestampSplit',['../structadi__mac___device__t.html#acea018e12419ef3ce0fb0d26a294714f',1,'adi_mac_Device_t']]],
+  ['oatrxsize_443',['oaTrxSize',['../structadi__mac___device__t.html#a642e22ee3e1cf49e5f700cc2a8e88092',1,'adi_mac_Device_t']]],
+  ['oatxc_444',['oaTxc',['../structadi__mac___device__t.html#af92dff083662376c15854aced8b36791',1,'adi_mac_Device_t']]],
+  ['oatxcurbufbyteoffset_445',['oaTxCurBufByteOffset',['../structadi__mac___device__t.html#ac1f364b85486dfed75656b4b2ba311c4',1,'adi_mac_Device_t']]],
+  ['oatxcurbufidx_446',['oaTxCurBufIdx',['../structadi__mac___device__t.html#a92656e088e1ba26683c795e8d2a36291',1,'adi_mac_Device_t']]],
+  ['oavalidflag_447',['oaValidFlag',['../structadi__mac___device__t.html#aab129e8f44ec03bc5232a440bb160676',1,'adi_mac_Device_t']]],
+  ['odd_5fcnt_448',['ODD_CNT',['../structadi__phy___frame_chk_error_counters__t.html#adc1c677faa232b561d851fead082da5b',1,'adi_phy_FrameChkErrorCounters_t']]],
+  ['odd_5fpre_5fcnt_449',['ODD_PRE_CNT',['../structadi__phy___frame_chk_error_counters__t.html#aa54c00624d017828231b9ec7564109a4',1,'adi_phy_FrameChkErrorCounters_t']]],
+  ['osz_5fcnt_450',['OSZ_CNT',['../structadi__phy___frame_chk_error_counters__t.html#af715345c4e4df6ce3c16c6e971cf0c36',1,'adi_phy_FrameChkErrorCounters_t']]],
+  ['oui_451',['oui',['../structadin2111___device_id__t.html#a6cff00b8f9d543d26b55fb3f020871c4',1,'adin2111_DeviceId_t']]]
+];

@@ -1,0 +1,42 @@
+
+
+================================================================================
+v1.0.0 (07 December 2021)
+--------------------------------------------------------------------------------
+
+* Renamed BSP from Eval_ADIN21xx to STM32L4xx
+* Implemented callback functionality and added link status change callback
+  example to SoftwareLoopback
+* Add APIs for timestamp handling
+* Changed directory structure of SoftwareLoopback example to match other examples
+* Added example of using the hardware frame generator/checker (FrameGenChkExample)
+* Added example of using lwIP with the ADIN2111 software driver
+
+================================================================================
+v0.3.0 (18 August 2021)
+--------------------------------------------------------------------------------
+
+* Added support for link quality reading using MSE
+* Added support for test modes
+* Added support for frame generator and frame checker
+* Added new API for reading device identification
+
+================================================================================
+v0.2.0 (09 July 2021)
+--------------------------------------------------------------------------------
+
+* Add support for OPEN Alliance SPI protocol (U2 only)
+* Add support for U2 including register map updates
+* Frame Check Sequence (FCS) calculation and validation in software
+* The size of device structures for MAC/PHY components has changed
+* Address filters now include MAC address masks, in line with silicon changes
+* SoftwareLoopback example has separate build configurations for OPEN Alliance SPI
+  and generic SPI
+* Various code improvements
+* Documentation updates
+
+================================================================================
+v0.1.0 (20 November 2020)
+--------------------------------------------------------------------------------
+
+First release of the ADIN2111 device driver.

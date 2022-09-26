@@ -1,0 +1,26 @@
+var annotated_dup =
+[
+    [ "adi_eth_BufDesc_t", "structadi__eth___buf_desc__t.html", "structadi__eth___buf_desc__t" ],
+    [ "adi_eth_MacStatCounters_t", "structadi__eth___mac_stat_counters__t.html", "structadi__eth___mac_stat_counters__t" ],
+    [ "adi_mac_AddressRule_t", "structadi__mac___address_rule__t.html", "structadi__mac___address_rule__t" ],
+    [ "adi_mac_Device_t", "structadi__mac___device__t.html", "structadi__mac___device__t" ],
+    [ "adi_mac_DriverConfig_t", "structadi__mac___driver_config__t.html", "structadi__mac___driver_config__t" ],
+    [ "adi_mac_FifoSizes_t", "structadi__mac___fifo_sizes__t.html", "structadi__mac___fifo_sizes__t" ],
+    [ "adi_mac_ForwardMode_t", "structadi__mac___forward_mode__t.html", "structadi__mac___forward_mode__t" ],
+    [ "adi_mac_FrameHeader_t", "structadi__mac___frame_header__t.html", "structadi__mac___frame_header__t" ],
+    [ "adi_mac_FrameStruct_t", "structadi__mac___frame_struct__t.html", "structadi__mac___frame_struct__t" ],
+    [ "adi_mac_OaErrorStats_t", "structadi__mac___oa_error_stats__t.html", "structadi__mac___oa_error_stats__t" ],
+    [ "adi_mac_Queue_t", "structadi__mac___queue__t.html", "structadi__mac___queue__t" ],
+    [ "adi_mac_StatusRegisters_t", "structadi__mac___status_registers__t.html", "structadi__mac___status_registers__t" ],
+    [ "adi_mac_TimestampRdy_t", "structadi__mac___timestamp_rdy__t.html", "structadi__mac___timestamp_rdy__t" ],
+    [ "adi_mac_TsTimerConfig_t", "structadi__mac___ts_timer_config__t.html", "structadi__mac___ts_timer_config__t" ],
+    [ "adi_mac_TsTimespec_t", "structadi__mac___ts_timespec__t.html", "structadi__mac___ts_timespec__t" ],
+    [ "adi_phy_AnStatus_t", "structadi__phy___an_status__t.html", "structadi__phy___an_status__t" ],
+    [ "adi_phy_DriverConfig_t", "structadi__phy___driver_config__t.html", "structadi__phy___driver_config__t" ],
+    [ "adi_phy_FrameChkErrorCounters_t", "structadi__phy___frame_chk_error_counters__t.html", "structadi__phy___frame_chk_error_counters__t" ],
+    [ "adi_phy_MseLinkQuality_t", "structadi__phy___mse_link_quality__t.html", "structadi__phy___mse_link_quality__t" ],
+    [ "adin2111_DeviceId_t", "structadin2111___device_id__t.html", "structadin2111___device_id__t" ],
+    [ "adin2111_DeviceStruct_t", "structadin2111___device_struct__t.html", "structadin2111___device_struct__t" ],
+    [ "adin2111_DriverConfig_t", "structadin2111___driver_config__t.html", "structadin2111___driver_config__t" ],
+    [ "adin2111_DynamicTableEntry_t", "structadin2111___dynamic_table_entry__t.html", "structadin2111___dynamic_table_entry__t" ]
+];
