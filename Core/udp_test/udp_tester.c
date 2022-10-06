@@ -1,10 +1,14 @@
 #include "udp_tester.h"
 
 #if LWIP_UDP
-
+#include <stdio.h>
+#include <stdlib.h>
 #include "lwip/udp.h"
 #include "lwip/timeouts.h"
 #include "lwip/debug.h"
+#include "tim.h"
+#include "gpio.h"
+#include "math.h"
 
 #define TFTP_MAX_PAYLOAD_SIZE 512
 #define TFTP_HEADER_LENGTH    4
@@ -29,12 +33,17 @@ enum tftp_error {
 };
 */
 
-
-
 #include <string.h>
  TIM_HandleTypeDef htim1;
 int angle = 0;
 int angleAdd = 0;
+int counter = 0;
+u8_t GoZeroFlag = 0;
+float rot_deg = 0;
+u8_t rampFlag = 0;
+int RPMGlobal;
+int PeriodGlobal;
+int Period = 0;
 
 struct tftp_state {
   const struct tftp_context *ctx;
@@ -48,9 +57,10 @@ struct tftp_state {
   u16_t blknum;
   u8_t retries;
   u8_t mode_write;
+
 };
 
-void direction(int dir);
+void direction(u8_t dir);
 void setFreq(int del);
 void quarterPrStep();
 void delay(uint16_t us);
@@ -109,13 +119,15 @@ send_msg(const ip_addr_t *addr, u16_t port, const char *str)
 typedef struct {
     u8_t addrr;
     u8_t op1;
-    u8_t op2;
-    int value;
+    int op2;
+    u16_t value;
 } UdpPack;
 
 static void
 recv(void *arg, struct udp_pcb *upcb, struct pbuf *p, const ip_addr_t *addr, u16_t port)
 {
+	GoZeroFlag = 0;
+
 	UdpPack *sbuf = (UdpPack*) p->payload;
 
     LWIP_UNUSED_ARG(arg);
@@ -141,7 +153,21 @@ recv(void *arg, struct udp_pcb *upcb, struct pbuf *p, const ip_addr_t *addr, u16
     }
     else if(sbuf -> addrr == 2){
     	send_msg(addr, port, "vroom vroom");
-    	direction(sbuf->op1);
+
+    	if(sbuf -> op1 == 2){
+    		__HAL_TIM_SET_AUTORELOAD(&htim2,30000);
+    		ReturnToZero();
+    	}
+
+    	else {
+
+    		rot_deg = roundf(sbuf-> op2 * 1.111)*8;
+
+    		direction(sbuf->op1);
+
+    		calcPeriod(sbuf -> value);
+    	}
+
     }
     else if(sbuf -> addrr == 3){
     	send_msg(addr, port, "Gaffel sensor");
@@ -214,9 +240,7 @@ tftp_init()
  return ERR_OK;
 }
 
-/** @ingroup tftp
-* Deinitialize ("turn off") TFTP server.
-*/
+
 void tftp_cleanup(void)
 {
   LWIP_ASSERT("Cleanup called on non-initialized TFTP", tftp_state.upcb != NULL);
@@ -225,68 +249,107 @@ void tftp_cleanup(void)
   memset(&tftp_state, 0, sizeof(tftp_state));
 }
 
-void setFreq(int del) // sets the frequency
-{
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_SET);
-  delay(del);
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
-  delay(del);
 
-}
-
-void direction(int dir) // 4x each direction
+void direction(u8_t dir) // 4x each direction
 {
+
+	counter = 0;
+
 	if(dir == 1)
 	{
-	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
-	  for(int i=0; i<800; i++)
-	  {
-		  setFreq(31000);
-	  }
-	  dir = 0;
-	  HAL_Delay(1000);
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
 	}
+
 	if(dir == 0)
 	{
-	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
-	  for(int i=0; i<800; i++)
-	  {
-		  setFreq(31000);
-	  }
-	  HAL_Delay(1000);
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
+	 }
+
+}
+
+
+int top_counter = 0;
+u8_t rampD_flag = 0;
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if (htim==&htim2)
+	{
+		if(GoZeroFlag == 1)
+		{
+			HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_9);
+			counter = 0;
+		}
+		else if(GoZeroFlag == 0)
+		{
+			HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_9);
+			counter += 1;
+
+		   if(RPMGlobal > 300)
+		   {
+			   if(rampD_flag == 0)
+			   {
+				   if(counter % 200 == 0)
+				   {
+					   if(PeriodGlobal > Period)
+					   {
+							PeriodGlobal -= 5;
+							top_counter = counter;
+					   }
+					   else if(PeriodGlobal == Period)
+					   {
+						   rampD_flag = 1;
+					   }
+					   __HAL_TIM_SET_COUNTER(&htim2, 0);
+					   __HAL_TIM_SET_AUTORELOAD(&htim2,PeriodGlobal);
+				   }
+			   }
+			   else if(rampD_flag == 1)
+			   {
+				   if(counter % 200 == 0)
+				   {
+					  if(counter > (rot_deg - top_counter))
+					  {
+						  PeriodGlobal += 5;
+						  __HAL_TIM_SET_COUNTER(&htim2, 0);
+						  __HAL_TIM_SET_AUTORELOAD(&htim2,PeriodGlobal);
+					  }
+				   }
+			   }
+			}
+
+			if (counter == rot_deg)
+			{
+				HAL_TIM_Base_Stop_IT(&htim2);
+				__HAL_TIM_SET_COUNTER(&htim2, 0);
+				 rampD_flag = 0;
+			}
+		}
 	}
 }
 
-void quarterPrStep()
+void calcPeriod(u16_t RPM)
 {
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
-  for(int i=0; i<4; i++)
-  {
+	Period = 48000000.0/((RPM/60.0)*1600.0);
+	//PeriodGlobal = Period;
+	if(RPM > 300)
+	{
+		__HAL_TIM_SET_AUTORELOAD(&htim2,7800);
+		PeriodGlobal = 7800;
+		RPMGlobal = RPM;
+	} else
+	{
+		__HAL_TIM_SET_AUTORELOAD(&htim2,Period);
+		RPMGlobal = RPM;
+	}
 
-	  for(int j=0; j<50; j++)
-	  {
-
-		  setFreq(62000);
-		  //angle = 360/(200/j);
-	  }
-	  //angleAdd += angle;
-	  //sprintf(angle2char, "%i", angleAdd);
-	  //sprintf(angleData, "%s", angle2char);
-	  //HAL_UART_Transmit(&huart1, AngleStr, 7, 10);
-	  //HAL_UART_Transmit(&huart1, angleData, 4, 10);
-	  //HAL_UART_Transmit(&huart1, newL, 2, 10);
-	  HAL_Delay(500);
-	  /*if(angleAdd == 360)
-	  {
-		  angleAdd = 0;
-	  }*/
-  }
+	HAL_TIM_Base_Start_IT(&htim2);
 }
 
-void delay(uint16_t us) //delay function in us
- {
- 	__HAL_TIM_SET_COUNTER(&htim1, 0);  // sets counter to 0
- 	while( __HAL_TIM_GET_COUNTER(&htim1) < us ); // wait for the counter to reach the entered value
- }
+void ReturnToZero(){
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
+	HAL_TIM_Base_Start_IT(&htim2);
+	GoZeroFlag = 1;
+}
+
 
 #endif /* LWIP_UDP */

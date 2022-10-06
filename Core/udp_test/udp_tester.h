@@ -14,6 +14,8 @@ extern "C" {
 #endif
 
 extern TIM_HandleTypeDef htim1;
+extern u8_t GoZeroFlag;
+void calcPeriod(u16_t RPM);
 
 /** @ingroup tftp
 * TFTP context containing callback functions for TFTP transfers
@@ -55,6 +57,7 @@ struct tftp_context {
 
 err_t tftp_init();
 void tftp_cleanup(void);
+void ReturnToZero(void);
 
 
 

@@ -28,8 +28,9 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l4xx_hal.h"
-//#include "gpio.h"
 
+//#include "gpio.h"
+//extern int flag;
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 

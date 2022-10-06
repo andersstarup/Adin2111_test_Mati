@@ -23,12 +23,15 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "gpio.h"
+#include "tim.h"
+#include "udp_tester.h"
 
 /* USER CODE BEGIN 0 */
 
 /* Store the IRQ callback and user parameter locally */
 static          ADI_CB gpfIntCallback = NULL;
 static void     *gpIntCBParam = NULL;
+int counterrot = 0;
 /* USER CODE END 0 */
 
 /*----------------------------------------------------------------------------*/
@@ -227,6 +230,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   }
   if(GPIO_Pin == GPIO_PIN_14){
 	HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13);
+	if(GoZeroFlag == 1){
+		HAL_TIM_Base_Stop_IT(&htim2);
+		__HAL_TIM_SET_COUNTER(&htim2, 0);
+		GoZeroFlag = 0;
+	}
    }
 
 

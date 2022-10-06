@@ -18,7 +18,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "tim.h"
 #include "udp_tester.h"
+//#include "stdbool.h"
 
 //#include "Boardsupport.h"
 
@@ -60,14 +62,14 @@
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+int flag = 0;
 /* USER CODE END 0 */
 
 /**
   * @brief  The application entry point.
   * @retval int
   */
- static void MX_TIM1_Init(void);
+
 
 int main(void)
 {
@@ -92,7 +94,7 @@ int main(void)
   boardDetails.mac[2] =	0x22;
   boardDetails.mac[3] =	0xFE;
   boardDetails.mac[4] =	0xDA;
-  boardDetails.mac[5] =	0xC9; //0xB9 for 2nd board
+  boardDetails.mac[5] =	0xC9; //0xB9 for 2nd board 0xC9
 
   boardDetails.ip_addr[0] =   192;
   boardDetails.ip_addr[1] =   168;
@@ -120,23 +122,17 @@ int main(void)
   BSP_delayMs(500);
 
   netif_set_link_up(&myConn.netif);
-  /* USER CODE END 2 */
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
   tftp_init();
 
-  MX_TIM1_Init();
-  HAL_TIM_Base_Start(&htim1);
+  MX_TIM2_Init();
 
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
 
+  ReturnToZero();
 
   while (1)
   {
-	  //HAL_GPIO_WritePin(GPIOG, GPIO_PIN_14, GPIO_PIN_SET);
-	  //MX_Led_Toggle(GPIOG, GPIO_PIN_14);
-	  //HAL_Delay(500);
-	  //HAL_Delay(500);
     /* USER CODE END WHILE */
       uint32_t now  = BSP_SysNow();
       if (now - heartbeatCheckTime >= 250)
@@ -155,50 +151,6 @@ int main(void)
 }
 
 
-static void MX_TIM1_Init(void)
-{
-
-  /* USER CODE BEGIN TIM1_Init 0 */
-
-  /* USER CODE END TIM1_Init 0 */
-
-  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
-
-  __HAL_RCC_TIM1_CLK_ENABLE();
-
-  /* USER CODE BEGIN TIM1_Init 1 */
-
-  /* USER CODE END TIM1_Init 1 */
-  htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 1;
-  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 65535-1;
-  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim1.Init.RepetitionCounter = 0;
-  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-  if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-  sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM1_Init 2 */
-
-  /* USER CODE END TIM1_Init 2 */
-}
-
-
 
 void Error_Handler(void)
 {
@@ -210,6 +162,8 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
+
+
 
 
 

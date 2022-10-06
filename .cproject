@@ -84,7 +84,7 @@
 					<sourceEntries>
 						<entry excluding="Src/tftp_server_copy.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
-						<entry excluding="core/dns.c|core/sys.c|core/raw.c|core/altcp.c|core/tcp_out.c|core/tcp_in.c|core/tcp.c|core/altcp_tcp.c|core/altcp_alloc.c|api|api/netbuf.c|api/netdb.c|api/netifapi.c|api/sockets.c|api/tcpip.c|apps/lwiperf/lwiperf.c|apps/altcp_tls|apps/mdns|apps/mqtt|apps/netbiosns|apps/smtp|apps/snmp|apps/sntp|apps/http|apps/tftp/tftp_server.c|apps/http/fsdata.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="external/lwip-2.1.2/src"/>
+						<entry excluding="netif/zepif.c|netif/slipif.c|netif/lowpan6.c|netif/lowpan6_common.c|netif/lowpan6_ble.c|netif/bridgeif.c|netif/bridgeif_fdb.c|core/ipv6|core/dns.c|core/sys.c|core/raw.c|core/altcp.c|core/tcp_out.c|core/tcp_in.c|core/tcp.c|core/altcp_tcp.c|core/altcp_alloc.c|api|api/netbuf.c|api/netdb.c|api/netifapi.c|api/sockets.c|api/tcpip.c|apps/lwiperf/lwiperf.c|apps/altcp_tls|apps/mdns|apps/mqtt|apps/netbiosns|apps/smtp|apps/snmp|apps/sntp|apps/http|apps/tftp/tftp_server.c|apps/http/fsdata.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="external/lwip-2.1.2/src"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -160,6 +160,7 @@
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="external/lwip-2.1.2/src/core/ipv4"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
