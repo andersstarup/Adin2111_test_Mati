@@ -9,6 +9,7 @@
 #include "tim.h"
 #include "gpio.h"
 #include "math.h"
+#include "lwjson/lwjson.h"
 
 #define TFTP_MAX_PAYLOAD_SIZE 512
 #define TFTP_HEADER_LENGTH    4
@@ -90,7 +91,7 @@ close_handle(void)
 
 
 
-static void
+void
 send_msg(const ip_addr_t *addr, u16_t port, const char *str)
 {
   int str_length = strlen(str);
@@ -122,7 +123,11 @@ typedef struct {
     int op2;
     u16_t value;
 } UdpPack;
-
+/*
+typedef struct {
+    char* addrr;
+} UdpPacker;
+*/
 static void
 recv(void *arg, struct udp_pcb *upcb, struct pbuf *p, const ip_addr_t *addr, u16_t port)
 {
@@ -140,43 +145,94 @@ recv(void *arg, struct udp_pcb *upcb, struct pbuf *p, const ip_addr_t *addr, u16
     return;
     }
 
+   //snprintf()
+
    tftp_state.last_pkt = tftp_state.timer;
    tftp_state.retries = 0;
 
-   if(sbuf -> addrr == 1){
-    	//et = (char)*sbuf;
-		send_msg(addr, port, "LED Toggle");
-		for(int i=0; i <= sbuf -> op1; i++){
-			HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13); // A7
-			HAL_Delay(500);
-		}
-    }
-    else if(sbuf -> addrr == 2){
-    	send_msg(addr, port, "vroom vroom");
+   ip_addr_t toaddr;
+   toaddr.addr = 0x7801a8c0; // PC
 
-    	if(sbuf -> op1 == 2){
-    		__HAL_TIM_SET_AUTORELOAD(&htim2,30000);
-    		ReturnToZero();
-    	}
+   /*
+   ip_addr_t broadcast;
+   broadcast.addr = 0xff01a8c0; // broadcast
 
-    	else {
+   ip_addr_t SrcAddr;
+   SrcAddr.addr = ip_current_src_addr(); // broadcast
+   char ipsrc = ip_current_src_addr();
 
-    		rot_deg = roundf(sbuf-> op2 * 1.111)*8;
+   */
 
-    		direction(sbuf->op1);
+   int hejmed1 = ip_addr_isbroadcast(ip_current_dest_addr(), ip_current_netif());
 
-    		calcPeriod(sbuf -> value);
-    	}
+   if(ip_addr_isbroadcast(ip_current_dest_addr(), ip_current_netif()) == 1){
+	   send_msg(&toaddr, 73, "Jeg er fork board");
 
-    }
-    else if(sbuf -> addrr == 3){
-    	send_msg(addr, port, "Gaffel sensor");
-    }
-    else{
-      send_msg(addr, port, "Invalid key. Try again");
-      //HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
-    }
+   }
+
+   else {
+	   if(sbuf -> addrr == 1){
+	   		//send_msg(addr, port, "LED Toggle");
+	   	  // toaddr.port = 70
+
+
+	   		send_msg(&toaddr, 73, "hej");
+	   		for(int i=0; i <= sbuf -> op1; i++){
+	   			HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13); // A7
+	   			HAL_Delay(500);
+	   		}
+	   	}
+	   	else if(sbuf -> addrr == 2){
+	   		send_msg(addr, 73, "vroom vroom");
+
+	   		if(sbuf -> op1 == 2){
+	   			__HAL_TIM_SET_AUTORELOAD(&htim2,30000);
+	   			//ReturnToZero();
+	   		}
+
+	   		else {
+
+	   			rot_deg = roundf(sbuf-> op2 * 1.111)*8;
+
+	   			//direction(sbuf->op1);
+
+	   			//calcPeriod(sbuf -> value);
+	   		}
+
+	   	}
+	   	else if(sbuf -> addrr == 3){
+	   		send_msg(addr, 73, "Gaffel sensor");
+	   	}
+	   	else if (sbuf -> addrr == '4'){
+	   		send_msg(&toaddr, 73, "Skulle hilse fra board 1");
+	   	}
+	   	else{
+	   	  //send_msg(addr, 73, "Invalid key. Try again");
+	   	  //HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
+	   	}
+   }
     pbuf_free(p);
+}
+
+/* LwJSON instance and tokens */
+static lwjson_token_t tokens[128];
+static lwjson_t lwjson;
+
+void
+example_minimal_run(void) {
+    lwjson_init(&lwjson, tokens, LWJSON_ARRAYSIZE(tokens));
+    if (lwjson_parse(&lwjson, "{\"mykey\":\"myvalue\"}") == lwjsonOK) {
+        const lwjson_token_t* t;
+        printf("JSON parsed..\r\n");
+
+        /* Find custom key in JSON */
+        if ((t = lwjson_find(&lwjson, "mykey")) != NULL) {
+            printf("Key found with data type: %d\r\n", (int)t->type);
+        }
+
+        /* Call this when not used anymore */
+        lwjson_free(&lwjson);
+    }
 }
 
 
@@ -215,6 +271,7 @@ err_t
 tftp_init()
 {
   err_t ret;
+  //err_t ret1;
 
  /* LWIP_ASSERT_CORE_LOCKED(); is checked by udp_new() */
   struct udp_pcb *pcb = udp_new_ip_type(IPADDR_TYPE_ANY);
@@ -228,6 +285,12 @@ tftp_init()
     return ret;
   }
 
+ /* ret1 = udp_bind(pcb, IP_ANY_TYPE, TFTP_PORT);
+   if (ret != ERR_OK) {
+     udp_remove(pcb);
+     return ret;
+   }*/
+
  tftp_state.handle    = NULL;
   tftp_state.port      = 0;
   //tftp_state.ctx       = ctx;
@@ -237,7 +300,12 @@ tftp_init()
 
  udp_recv(pcb, recv, NULL);
 
+ ip_addr_t toaddr;
+ toaddr.addr = 0x7801a8c0; // PC
+ send_msg(&toaddr, 73, "hej");
+
  return ERR_OK;
+
 }
 
 
@@ -249,7 +317,7 @@ void tftp_cleanup(void)
   memset(&tftp_state, 0, sizeof(tftp_state));
 }
 
-
+/*
 void direction(u8_t dir) // 4x each direction
 {
 
@@ -264,9 +332,8 @@ void direction(u8_t dir) // 4x each direction
 	{
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
 	 }
-
 }
-
+*/
 
 int top_counter = 0;
 u8_t rampD_flag = 0;
@@ -274,7 +341,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim==&htim2)
 	{
-		if(GoZeroFlag == 1)
+		/*if(GoZeroFlag == 1)
 		{
 			HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_9);
 			counter = 0;
@@ -323,10 +390,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 				__HAL_TIM_SET_COUNTER(&htim2, 0);
 				 rampD_flag = 0;
 			}
-		}
+		}*/
 	}
 }
 
+/*
 void calcPeriod(u16_t RPM)
 {
 	Period = 48000000.0/((RPM/60.0)*1600.0);
@@ -350,6 +418,6 @@ void ReturnToZero(){
 	HAL_TIM_Base_Start_IT(&htim2);
 	GoZeroFlag = 1;
 }
-
+*/
 
 #endif /* LWIP_UDP */

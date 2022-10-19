@@ -1,4 +1,9 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\Core",
+    "\\Core\\Src"
+  ],
+  "SelectedNode": "\\Core\\Src\\system_stm32l4xx.c",
   "PreviewInSolutionExplorer": false
 }

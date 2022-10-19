@@ -94,12 +94,12 @@ int main(void)
   boardDetails.mac[2] =	0x22;
   boardDetails.mac[3] =	0xFE;
   boardDetails.mac[4] =	0xDA;
-  boardDetails.mac[5] =	0xC9; //0xB9 for 2nd board 0xC9
+  boardDetails.mac[5] =	0xB9; //0xB9 for 2nd board 0xC9
 
   boardDetails.ip_addr[0] =   192;
   boardDetails.ip_addr[1] =   168;
   boardDetails.ip_addr[2] =   1;
-  boardDetails.ip_addr[3] =   123; //123 for 2nd board
+  boardDetails.ip_addr[3] =   124; //123 for 2nd board
 
   boardDetails.net_mask[0] =  255;
   boardDetails.net_mask[1] =  255;
@@ -129,7 +129,7 @@ int main(void)
 
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_9, GPIO_PIN_RESET);
 
-  ReturnToZero();
+  //ReturnToZero();
 
   while (1)
   {
@@ -162,9 +162,4 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
-
-
-
-
-
 

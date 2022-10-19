@@ -230,6 +230,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   }
   if(GPIO_Pin == GPIO_PIN_14){
 	HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13);
+	//send_msg(2013374656, 70, "hej");
 	if(GoZeroFlag == 1){
 		HAL_TIM_Base_Stop_IT(&htim2);
 		__HAL_TIM_SET_COUNTER(&htim2, 0);
