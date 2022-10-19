@@ -67,7 +67,7 @@ enum lwip_iana_port_number {
   /** DHCP client */
   LWIP_IANA_PORT_DHCP_CLIENT = 68,
   /** TFTP */ //70
-  LWIP_IANA_PORT_TFTP        = 70,
+  LWIP_IANA_PORT_TFTP        = 72,
   /** HTTP */
   LWIP_IANA_PORT_HTTP        = 80,
   /** SNTP */

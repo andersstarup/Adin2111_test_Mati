@@ -145,14 +145,14 @@ recv(void *arg, struct udp_pcb *upcb, struct pbuf *p, const ip_addr_t *addr, u16
 
    if(sbuf -> addrr == 1){
     	//et = (char)*sbuf;
-		send_msg(addr, port, "LED Toggle");
+		send_msg(addr, 73, "LED Toggle");
 		for(int i=0; i <= sbuf -> op1; i++){
 			HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13); // A7
 			HAL_Delay(500);
 		}
     }
     else if(sbuf -> addrr == 2){
-    	send_msg(addr, port, "vroom vroom");
+    	send_msg(addr, 73, "vroom vroom");
 
     	if(sbuf -> op1 == 2){
     		__HAL_TIM_SET_AUTORELOAD(&htim2,30000);
@@ -170,8 +170,18 @@ recv(void *arg, struct udp_pcb *upcb, struct pbuf *p, const ip_addr_t *addr, u16
 
     }
     else if(sbuf -> addrr == 3){
-    	send_msg(addr, port, "Gaffel sensor");
+    	send_msg(addr, 73, "Gaffel sensor");
     }
+   	if(sbuf -> addrr == 4){
+   		ip_addr_t board2;
+   		board2.addr = 0x7c01a8c0; // Board 2
+
+   		ip_addr_t PC;
+   		PC.addr = 0x7801a8c0; // PC
+
+   		send_msg(&board2, 72, "4");
+   		send_msg(&PC, 73, "Sender besked til board 2");
+   	}
     else{
       send_msg(addr, port, "Invalid key. Try again");
       //HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
