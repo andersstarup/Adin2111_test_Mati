@@ -137,14 +137,14 @@ recv(void *arg, struct udp_pcb *upcb, struct pbuf *p, const ip_addr_t *addr, u16
 
     LWIP_UNUSED_ARG(arg);
     LWIP_UNUSED_ARG(upcb);
-
+/*
    if (((tftp_state.port != 0) && (port != tftp_state.port)) ||
       (!ip_addr_isany_val(tftp_state.addr) && !ip_addr_cmp(&tftp_state.addr, addr))) {
     send_msg(addr, port, "Only one connection at a time is supported");
     pbuf_free(p);
     return;
     }
-
+*/
    //snprintf()
 
    tftp_state.last_pkt = tftp_state.timer;
@@ -207,7 +207,7 @@ recv(void *arg, struct udp_pcb *upcb, struct pbuf *p, const ip_addr_t *addr, u16
 	   		send_msg(&toaddr, 73, "Skulle hilse fra board 1");
 	   	}
 	   	else{
-	   	  //send_msg(addr, 73, "Invalid key. Try again");
+	   	  send_msg(addr, 73, "Invalid key. Try again");
 	   	  //HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
 	   	}
    }
